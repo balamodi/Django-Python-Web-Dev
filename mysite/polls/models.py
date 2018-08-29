@@ -6,7 +6,7 @@ class Question(models.Model):
 		question_text = models.CharField(max_length=200)
 		pub_date = models.DateTimeField('Date published')
 		# ...
-		def _repr_(self):
+		def _str_(self):
 			return self.question_text
 		# ...
 		def was_published_recently(self):
@@ -19,7 +19,7 @@ class Choice(models.Model):
 		choice_text = models.CharField(max_length=200)
 		votes = models.IntegerField(default=0)
 		# ...
-		def _repr_(self):
+		def _str_(self):
 			return self.choice_text
 
 
